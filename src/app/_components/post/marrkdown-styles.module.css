@@ -1,0 +1,26 @@
+.markdown {
+  @apply text-lg leading-relaxed;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  @apply text-sm md:text-base my-10;
+}
+
+.markdown h2 {
+  @apply text-xl md:text-3xl mt-12 mb-4 leading-snug font-bold border-l-4 pl-2 border-blue-700;
+}
+
+.markdown h3 {
+  @apply text-lg md:text-2xl mt-8 mb-4 leading-snug;
+}
+
+.markdown img {
+  @apply block mx-auto w-full;
+}
+
+.markdown code {
+  @apply overflow-x-auto rounded-xl shadow-2xl text-sm p-4;
+}
