@@ -3,8 +3,6 @@ import { getStorage, getDownloadURL, ref, listAll } from "firebase/storage";
 import matter from "gray-matter";
 import { Post } from "./model/post";
 
-console.log("いいいいいい");
-
 const firebaseConfig = {
   apiKey: process.env.API_KEY,
   authDomain: process.env.AUTH_DOMAIN,
@@ -18,8 +16,6 @@ initializeApp(firebaseConfig);
 
 // ポスト全取得(SSG)
 export async function getAllPosts() {
-  console.log("うああああああ");
-  console.log(process.env.STORAGE_PATH);
   const storage = getStorage();
   const listRef = ref(storage, process.env.STORAGE_PATH);
   const response = await listAll(listRef);
@@ -46,8 +42,6 @@ export async function getAllPosts() {
 
 // ポスト単体取得
 export async function getSinglePost(slug: string) {
-  console.log("うおおおおおおおお");
-  console.log(process.env.STORAGE_PATH);
   const storage = getStorage();
   const postRef = ref(storage, `${process.env.STORAGE_PATH}/${slug}.md`);
   const url = await getDownloadURL(postRef);
