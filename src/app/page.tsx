@@ -17,7 +17,7 @@ export default async function Home() {
         <Container tags={tags}>
           <div className="md:px-2">
             <h2 className="text-3xl font-bold mb-4"># 最近の記事</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-3 md:gap-y-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-3 gap-y-3 md:gap-y-5">
               {posts.map((post) => (
                 <PostPreview
                   isPostPage={false}
