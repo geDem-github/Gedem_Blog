@@ -24,7 +24,7 @@
 }
 
 .markdown img {
-  @apply block mx-auto w-11/12;
+  @apply block mx-auto max-h-[680px];
 }
 
 .markdown code {
