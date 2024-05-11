@@ -26,8 +26,8 @@ export function PostPreview({
       href="/blog/[slug]"
       className={
         isPostPage
-          ? "flex flex-col mx-1 bg-zinc-500 p-2 rounded-lg hover:-translate-y-1 hover:underline duration-200"
-          : "flex flex-col mx-1 bg-neutral-700 p-2 rounded-lg hover:-translate-y-1 hover:underline duration-200"
+          ? "flex flex-col bg-zinc-500 p-2 rounded-lg hover:-translate-y-1 hover:underline duration-200"
+          : "flex flex-col bg-neutral-700 p-2 rounded-lg hover:-translate-y-1 hover:underline duration-200"
       }
     >
       <div className="mb-5">
@@ -42,7 +42,9 @@ export function PostPreview({
             #{tag}
           </button>
         ))}
-        <h3 className="text-base font-bold md:text-sm leading-snug">{title}</h3>
+        <h3 className="overflow-scroll text-base font-bold md:text-sm">
+          {title}
+        </h3>
       </div>
       <div className="mt-auto ml-auto">
         <DateFormatter dateString={date} />

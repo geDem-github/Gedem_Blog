@@ -36,18 +36,22 @@ export default async function Page({ params }: Params) {
   const modifiedHtml = highlightedPostContent.html();
 
   return (
-    <div className="px-4">
+    <div>
       <Header />
-      <main className="mt-14 mb-32">
+      <main className="mt-14 mb-32 px-4">
         <article>
           <Container headings={headings}>
-            <PostHeader
-              title={post.title}
-              tags={post.tags}
-              date={post.date}
-              coverImage={post.coverImage}
-            />
-            <PostBody content={modifiedHtml} headings={headings} />
+            <div className="md:px-2">
+              <div className="bg-neutral-700 rounded-xl">
+                <PostHeader
+                  title={post.title}
+                  tags={post.tags}
+                  date={post.date}
+                  coverImage={post.coverImage}
+                />
+                <PostBody content={modifiedHtml} headings={headings} />
+              </div>
+            </div>
           </Container>
         </article>
       </main>

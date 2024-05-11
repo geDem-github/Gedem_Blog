@@ -15,7 +15,7 @@ export async function PostBody(props: Props) {
   const recent3Posts = allPosts.slice(0, 3);
 
   return (
-    <div className="px-5">
+    <div className="px-4">
       {/* 見出し */}
       <Headings headings={props.headings} />
       {/* 本文 */}
@@ -30,7 +30,7 @@ export async function PostBody(props: Props) {
       {/* 最近の投稿 記事下 */}
       <div className="w-full mt-16 pb-32">
         <h3 className="text-4xl font-bold mb-5"># 最近の投稿</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-5 md:gap-y-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-5 md:gap-x-2 md:gap-y-20">
           {recent3Posts.map((post) => (
             <PostPreview
               isPostPage={true}

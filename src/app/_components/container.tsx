@@ -15,9 +15,7 @@ export const Container = ({ children, headings, tags }: Props) => {
         <div className="hidden md:inline-block w-3/12">
           <MenuSidebar />
         </div>
-        <div className="w-full md:w-9/12 lg:w-7/12 bg-neutral-700 rounded-xl md:mx-2">
-          {children}
-        </div>
+        <div className="w-full md:w-9/12 lg:w-7/12 md:mx-2">{children}</div>
         <div className="hidden lg:inline-block w-4/12">
           <PostSidebar headings={headings} />
         </div>
@@ -30,9 +28,7 @@ export const Container = ({ children, headings, tags }: Props) => {
         <div className="hidden md:inline-block w-3/12">
           <MenuSidebar />
         </div>
-        <div className="w-full md:w-9/12 lg:w-7/12 rounded-xl md:mx-2">
-          {children}
-        </div>
+        <div className="w-full md:w-9/12 lg:w-7/12 md:mx-2">{children}</div>
         <div className="hidden lg:inline-block w-4/12">
           <div>
             <h3># タグ</h3>

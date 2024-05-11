@@ -15,19 +15,21 @@ export default async function Home() {
       <Header />
       <main className="min-h-screen mt-5 md:mt-14 mb-32 px-4">
         <Container tags={tags}>
-          <h2 className="text-3xl font-bold p-2"># 最近の記事</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-3 md:gap-y-5  p-5">
-            {posts.map((post) => (
-              <PostPreview
-                isPostPage={false}
-                key={post.slug}
-                title={post.title}
-                tags={post.tags}
-                coverImage={post.coverImage}
-                date={post.date}
-                slug={post.slug}
-              />
-            ))}
+          <div className="md:px-2">
+            <h2 className="text-3xl font-bold mb-4"># 最近の記事</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-3 md:gap-y-5">
+              {posts.map((post) => (
+                <PostPreview
+                  isPostPage={false}
+                  key={post.slug}
+                  title={post.title}
+                  tags={post.tags}
+                  coverImage={post.coverImage}
+                  date={post.date}
+                  slug={post.slug}
+                />
+              ))}
+            </div>
           </div>
         </Container>
       </main>
