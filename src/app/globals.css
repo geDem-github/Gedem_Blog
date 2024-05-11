@@ -3,6 +3,5 @@
 @tailwind utilities;
 
 body {
-  background-color: rgb(38, 38, 40);
-  color: rgb(240, 240, 240);
+  @apply text-slate-50 bg-neutral-800;
 }
