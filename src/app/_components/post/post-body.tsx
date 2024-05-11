@@ -15,7 +15,7 @@ export async function PostBody(props: Props) {
   const recent3Posts = allPosts.slice(0, 3);
 
   return (
-    <div className="px-4">
+    <div className="px-8">
       {/* 見出し */}
       <Headings headings={props.headings} />
       {/* 本文 */}
