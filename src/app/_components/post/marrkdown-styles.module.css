@@ -17,7 +17,7 @@
 }
 
 .markdown h3 {
-  @apply text-lg md:text-2xl mt-8 mb-4 leading-snug;
+  @apply text-lg font-bold md:text-2xl mt-8 mb-4 leading-snug;
 }
 .markdown h3 a {
   @apply text-slate-50 hover:no-underline;
@@ -28,7 +28,7 @@
 }
 
 .markdown code {
-  @apply overflow-x-auto rounded-xl shadow-2xl text-xs md:text-sm p-4;
+  @apply md:max-w-[500px] overflow-x-scroll mx-auto shadow-2xl text-xs md:text-sm rounded-xl;
 }
 
 .markdown blockquote {
@@ -37,4 +37,60 @@
 
 .markdown a {
   @apply text-blue-400 hover:underline;
+}
+
+@media screen and (min-width: 810px) {
+  .markdown code {
+    @apply md:max-w-[520px];
+  }
+}
+@media screen and (min-width: 890px) {
+  .markdown code {
+    @apply md:max-w-[580px];
+  }
+}
+@media screen and (min-width: 1024px) {
+  .markdown code {
+    @apply md:max-w-[680px];
+  }
+}
+@media screen and (min-width: 1140px) {
+  .markdown code {
+    @apply md:max-w-[760px];
+  }
+}
+@media screen and (min-width: 1225px) {
+  .markdown code {
+    @apply md:max-w-[830px];
+  }
+}
+@media screen and (min-width: 1280px) {
+  .markdown code {
+    @apply md:max-w-[560px];
+  }
+}
+@media screen and (min-width: 1370px) {
+  .markdown code {
+    @apply md:max-w-[610px];
+  }
+}
+@media screen and (min-width: 1440px) {
+  .markdown code {
+    @apply md:max-w-[650px];
+  }
+}
+@media screen and (min-width: 1525px) {
+  .markdown code {
+    @apply md:max-w-[690px];
+  }
+}
+@media screen and (min-width: 1620px) {
+  .markdown code {
+    @apply md:max-w-[740px];
+  }
+}
+@media screen and (min-width: 1700px) {
+  .markdown code {
+    @apply md:max-w-[770px];
+  }
 }

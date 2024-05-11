@@ -26,7 +26,7 @@ export function PostPreview({
       href="/blog/[slug]"
       className={
         isPostPage
-          ? "flex flex-col bg-zinc-500 p-2 rounded-lg hover:-translate-y-1 hover:underline duration-200"
+          ? "flex flex-col bg-neutral-600 border border-gray-600 shadow-xl p-2 rounded-lg hover:-translate-y-1 hover:underline duration-200"
           : "flex flex-col bg-neutral-700 p-2 rounded-lg hover:-translate-y-1 hover:underline duration-200"
       }
     >

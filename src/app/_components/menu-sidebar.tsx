@@ -48,9 +48,12 @@ export const MenuSidebar = () => {
       <hr className="w-9/12 border-gray-400 mx-auto my-7 mb-10" />
 
       {/* サイト内リンクメニュー */}
-      <Link href="/" className="flex a px-5 hover:text-white">
-        <img src={faHouse.src} className="w-7 h-7" alt="ホーム" />
-        <p className="text-base ml-3 pt-1">Home</p>
+      <Link
+        href="/"
+        className="flex justify-center mr-14 a px-5 hover:text-white"
+      >
+        <img src={faHouse.src} className="w-7 h-7 mr-6" alt="ホーム" />
+        <p className="text-base pt-1">Home</p>
       </Link>
     </div>
   );
