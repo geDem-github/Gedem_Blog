@@ -35,7 +35,7 @@ export const Container = ({ children, headings, tags }: Props) => {
             {tags &&
               tags.map((tag, index) => (
                 <button
-                  className="bg-blue-400 text-xs mr-1 mb-1 py-1 px-2 rounded"
+                  className="bg-blue-400 text-base mr-2 mb-2 py-1 px-2 rounded"
                   key={index}
                 >
                   #{tag}
