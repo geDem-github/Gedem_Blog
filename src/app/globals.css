@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply text-slate-50 bg-neutral-800;
+  @apply text-slate-50 bg-neutral-800 tracking-wide;
 }
