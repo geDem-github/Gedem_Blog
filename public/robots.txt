@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: gedem-blog.vercel.app
-
-# Sitemaps
-Sitemap: gedem-blog.vercel.app/sitemap.xml

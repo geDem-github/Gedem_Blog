@@ -1,4 +1,4 @@
-import faPen from "../images/fontawesome-icons/pen-solid.svg";
+import faPen from "../_images/fontawesome-icons/pen-solid.svg";
 import { parseISO, format } from "date-fns";
 
 type Props = {

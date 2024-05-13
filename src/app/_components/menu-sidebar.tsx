@@ -1,8 +1,8 @@
 import Link from "next/link";
-import avatarImage from "../images/author-image/geDem.png";
-import wantedlyImage from "../images/sns-images/Wantedly_Mark_Wht.png";
-import githubImage from "../images/sns-images/github-mark-white.png";
-import faHouse from "../images/fontawesome-icons/house-solid.svg";
+import avatarImage from "../_images/author-image/geDem.png";
+import wantedlyImage from "../_images/sns-images/Wantedly_Mark_Wht.png";
+import githubImage from "../_images/sns-images/github-mark-white.png";
+import faHouse from "../_images/fontawesome-icons/house-solid.svg";
 
 export const MenuSidebar = () => {
   return (

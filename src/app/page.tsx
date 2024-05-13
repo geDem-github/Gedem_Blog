@@ -51,6 +51,20 @@ const getAllTags = (posts: Post[]): string[] => {
   return tags;
 };
 
+// const getAllTags = (posts: Post[]): Tag[] => {
+//   let rawTags: string[][] = [];
+//   posts.map((post) => {
+//     rawTags.push(post.tags);
+//   });
+//   const combinedArray = rawTags.flat();
+
+
+//   const tags: Tag[]  = combinedArray.map((item) => {
+//     return {tag: "hoge", count: 1};
+//   });
+//   return tags;
+// };
+
 // メタ情報生成
 export async function generateMetadata() {
   const title = "Home - geDemBlog";
