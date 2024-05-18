@@ -9,7 +9,6 @@ import { Metadata } from "next";
 export default async function Home() {
   const posts: Post[] = await getAllPosts();
   const tags = getAllTags(posts);
-
   return (
     <div>
       <Header />
@@ -38,32 +37,28 @@ export default async function Home() {
   );
 }
 
-const getAllTags = (posts: Post[]): string[] => {
-  let rawTags: string[][] = [];
-  posts.map((post) => {
-    rawTags.push(post.tags);
-  });
-  const combinedArray = rawTags.flat();
+export interface Tag {
+  name: string;
+  count: number;
+}
 
-  const tags = combinedArray.filter((item, index, array) => {
-    return array.indexOf(item) === index;
+const getAllTags = (posts: Post[]): Tag[] => {
+  const tagMap = new Map<string, Tag>();
+
+  posts.forEach((post) => {
+    post.tags.forEach((tag) => {
+      if (tagMap.has(tag)) {
+        const existingTag = tagMap.get(tag)!;
+        existingTag.count++;
+      } else {
+        tagMap.set(tag, { name: tag, count: 1 });
+      }
+    });
   });
+
+  const tags: Tag[] = Array.from(tagMap.values());
   return tags;
 };
-
-// const getAllTags = (posts: Post[]): Tag[] => {
-//   let rawTags: string[][] = [];
-//   posts.map((post) => {
-//     rawTags.push(post.tags);
-//   });
-//   const combinedArray = rawTags.flat();
-
-
-//   const tags: Tag[]  = combinedArray.map((item) => {
-//     return {tag: "hoge", count: 1};
-//   });
-//   return tags;
-// };
 
 // メタ情報生成
 export async function generateMetadata() {

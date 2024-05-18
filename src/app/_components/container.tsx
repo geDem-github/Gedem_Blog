@@ -1,10 +1,11 @@
+import { Tag } from "../page";
 import { MenuSidebar } from "./menu-sidebar";
 import { PostSidebar } from "./post/post-sidebar";
 
 type Props = {
   children: React.ReactNode;
   headings?: string[];
-  tags?: string[];
+  tags?: Tag[];
 };
 
 export const Container = ({ children, headings, tags }: Props) => {
@@ -38,7 +39,9 @@ export const Container = ({ children, headings, tags }: Props) => {
                   className="bg-blue-400 text-base mr-2 mb-2 py-1 px-2 rounded"
                   key={index}
                 >
-                  #{tag}
+                  #{tag.name}
+                  &nbsp;
+                  {tag.count}
                 </button>
               ))}
           </div>
