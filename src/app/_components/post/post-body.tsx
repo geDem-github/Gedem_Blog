@@ -5,6 +5,7 @@ import { getAllPosts } from "@/api";
 import Link from "next/link";
 
 type Props = {
+  slug: string;
   content: string;
   headings: string[];
 };
@@ -12,7 +13,9 @@ type Props = {
 export async function PostBody(props: Props) {
   // 最近の投稿
   const allPosts = await getAllPosts();
-  const recent3Posts = allPosts.slice(0, 3);
+  const recent3Posts = allPosts
+    .filter((post) => post.slug !== props.slug)
+    .slice(0, 3);
 
   return (
     <div className="px-8">

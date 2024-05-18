@@ -49,7 +49,11 @@ export default async function Page({ params }: Params) {
                   date={post.date}
                   coverImage={post.coverImage}
                 />
-                <PostBody content={modifiedHtml} headings={headings} />
+                <PostBody
+                  slug={post.slug}
+                  content={modifiedHtml}
+                  headings={headings}
+                />
               </div>
             </div>
           </Container>
