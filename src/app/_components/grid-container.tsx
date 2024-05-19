@@ -1,6 +1,7 @@
-import { Tag } from "../page";
+import { Tag } from "@/api";
 import { MenuSidebar } from "./menu-sidebar";
 import { PostSidebar } from "./post/post-sidebar";
+import Link from "next/link";
 
 type Props = {
   children: React.ReactNode;
@@ -8,7 +9,7 @@ type Props = {
   tags?: Tag[];
 };
 
-export const Container = ({ children, headings, tags }: Props) => {
+export const GridContainer = ({ children, headings, tags }: Props) => {
   if (headings) {
     // 記事画面
     return (
@@ -35,14 +36,19 @@ export const Container = ({ children, headings, tags }: Props) => {
             <h3># タグ</h3>
             {tags &&
               tags.map((tag, index) => (
-                <button
-                  className="bg-blue-400 text-base mr-2 mb-2 py-1 px-2 rounded"
+                <Link
+                  href={`/blog/tag/${tag.name.replace(/\s/g, "")}`}
                   key={index}
                 >
-                  #{tag.name}
-                  &nbsp;
-                  {tag.count}
-                </button>
+                  <button
+                    className="bg-blue-400 text-base mr-2 mb-2 py-1 px-2 rounded"
+                    key={index}
+                  >
+                    #{tag.name}
+                    &nbsp;
+                    {tag.count}
+                  </button>
+                </Link>
               ))}
           </div>
         </div>

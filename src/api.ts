@@ -56,3 +56,26 @@ function getPostContent(fileName: string, fileContent: string) {
   const { data, content } = matter(fileContent);
   return { ...data, slug: pagePath, content } as Post;
 }
+
+// タグ全取得
+export interface Tag {
+  name: string;
+  count: number;
+}
+export function getAllTags(posts: Post[]): Tag[] {
+  const tagMap = new Map<string, Tag>();
+
+  posts.forEach((post) => {
+    post.tags.forEach((tag) => {
+      if (tagMap.has(tag)) {
+        const existingTag = tagMap.get(tag)!;
+        existingTag.count++;
+      } else {
+        tagMap.set(tag, { name: tag, count: 1 });
+      }
+    });
+  });
+
+  const tags: Tag[] = Array.from(tagMap.values());
+  return tags;
+}

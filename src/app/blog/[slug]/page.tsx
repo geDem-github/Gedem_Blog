@@ -6,7 +6,7 @@ import html from "remark-html";
 import { PostHeader } from "@/app/_components/post/post-header";
 import { PostBody } from "@/app/_components/post/post-body";
 import { Header } from "@/app/_components/header";
-import { Container } from "@/app/_components/container";
+import { GridContainer } from "@/app/_components/grid-container";
 import { Footer } from "@/app/_components/footer";
 import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.min.css";
@@ -40,7 +40,7 @@ export default async function Page({ params }: Params) {
       <Header />
       <main className="mt-14 mb-32 px-4">
         <article>
-          <Container headings={headings}>
+          <GridContainer headings={headings}>
             <div className="md:px-2">
               <div className="bg-neutral-700 rounded-xl">
                 <PostHeader
@@ -56,7 +56,7 @@ export default async function Page({ params }: Params) {
                 />
               </div>
             </div>
-          </Container>
+          </GridContainer>
         </article>
       </main>
       <Footer />
