@@ -4,4 +4,5 @@
 
 body {
   @apply text-slate-50 bg-neutral-800 tracking-wide;
+  word-break: break-all;
 }
