@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION_CODE,
   },
+  icons: {
+    icon: "/src/app/icon.ico",
+  },
 };
 
 export default function RootLayout({

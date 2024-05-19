@@ -59,15 +59,3 @@ const getAllTags = (posts: Post[]): Tag[] => {
   const tags: Tag[] = Array.from(tagMap.values());
   return tags;
 };
-
-// メタ情報生成
-export async function generateMetadata() {
-  const title = "Home - geDemBlog";
-
-  return {
-    title: title,
-    openGraph: {
-      title,
-    },
-  } as Metadata;
-}
