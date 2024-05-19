@@ -10,7 +10,7 @@ type Params = {
 export default async function Page({ params }: Params) {
   return (
     <PostCardsContainer
-      title={`"${params.tagName}" の記事`}
+      title={`"${decodeURI(params.tagName)}" の記事`}
       tagName={params.tagName}
     />
   );

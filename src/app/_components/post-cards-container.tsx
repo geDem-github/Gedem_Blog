@@ -15,10 +15,10 @@ export async function PostCardsContainer(props: Props) {
   let posts: Post[] = await getAllPosts();
   const tags = getAllTags(posts);
 
-  // もしタグ検索されているなら、マッチする記事をpostsに代入
+  // タグ検索画面なら、マッチする記事をpostsに代入
   let tag: Tag | undefined;
   if (props.tagName) {
-    tag = tags.find((tag) => tag.name.replace(/\s/g, "") == props.tagName);
+    tag = tags.find((tag) => encodeURI(tag.name) == props.tagName);
 
     if (!tag) {
       return notFound();
@@ -26,7 +26,7 @@ export async function PostCardsContainer(props: Props) {
 
     posts = posts.filter((post) => {
       return post.tags.find(
-        (postTagName) => postTagName.replace(/\s/g, "") == props.tagName
+        (postTagName) => encodeURI(postTagName) == props.tagName
       );
     });
   }

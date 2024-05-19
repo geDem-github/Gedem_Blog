@@ -36,10 +36,7 @@ export const GridContainer = ({ children, headings, tags }: Props) => {
             <h3># タグ</h3>
             {tags &&
               tags.map((tag, index) => (
-                <Link
-                  href={`/blog/tag/${tag.name.replace(/\s/g, "")}`}
-                  key={index}
-                >
+                <Link href={`/blog/tag/${encodeURI(tag.name)}`} key={index}>
                   <button
                     className="bg-blue-400 text-base mr-2 mb-2 py-1 px-2 rounded"
                     key={index}
