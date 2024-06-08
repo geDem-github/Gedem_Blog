@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://gedem-blog.vercel.app/</loc><lastmod>2024-05-14T14:08:09.344Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://gedem-blog.vercel.app/blog/jetpack-compose-firestore-get/</loc><lastmod>2024-05-14T14:08:09.344Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://gedem-blog.vercel.app/blog/qiita-move-article/</loc><lastmod>2024-05-14T14:08:09.344Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://gedem-blog.vercel.app/blog/vercel-nextjs-google-search-console/</loc><lastmod>2024-05-14T14:08:09.344Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://gedem-blog.vercel.app/blog/react-native-expo-start/</loc><lastmod>2024-05-14T14:08:09.344Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://gedem-blog.vercel.app/blog/firebase-error-1/</loc><lastmod>2024-05-14T14:08:09.344Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://gedem-blog.vercel.app/blog/android-error-1/</loc><lastmod>2024-05-14T14:08:09.344Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://gedem-blog.vercel.app/blog/react-css-sidebar/</loc><lastmod>2024-05-14T14:08:09.344Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://gedem-blog.vercel.app/blog/jetpack-compose-rgb/</loc><lastmod>2024-05-14T14:08:09.344Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://gedem-blog.vercel.app/blog/swift-array-functions/</loc><lastmod>2024-05-14T14:08:09.344Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://gedem-blog.vercel.app/icon.ico/</loc><lastmod>2024-06-08T04:49:13.403Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://gedem-blog.vercel.app/</loc><lastmod>2024-06-08T04:49:13.404Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://gedem-blog.vercel.app/blog/jetpack-compose-preview-horizontal/</loc><lastmod>2024-06-08T04:49:13.404Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://gedem-blog.vercel.app/blog/expo-error-1/</loc><lastmod>2024-06-08T04:49:13.404Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://gedem-blog.vercel.app/blog/jetpack-compose-firestore-get/</loc><lastmod>2024-06-08T04:49:13.404Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://gedem-blog.vercel.app/blog/qiita-move-article/</loc><lastmod>2024-06-08T04:49:13.404Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://gedem-blog.vercel.app/blog/vercel-nextjs-google-search-console/</loc><lastmod>2024-06-08T04:49:13.404Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://gedem-blog.vercel.app/blog/react-native-expo-start/</loc><lastmod>2024-06-08T04:49:13.404Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://gedem-blog.vercel.app/blog/firebase-error-1/</loc><lastmod>2024-06-08T04:49:13.404Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://gedem-blog.vercel.app/blog/android-error-1/</loc><lastmod>2024-06-08T04:49:13.404Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://gedem-blog.vercel.app/blog/react-css-sidebar/</loc><lastmod>2024-06-08T04:49:13.404Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://gedem-blog.vercel.app/blog/jetpack-compose-rgb/</loc><lastmod>2024-06-08T04:49:13.404Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://gedem-blog.vercel.app/blog/swift-array-functions/</loc><lastmod>2024-06-08T04:49:13.404Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
