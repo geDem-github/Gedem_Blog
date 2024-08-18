@@ -1,4 +1,4 @@
-import markdownStyles from "./marrkdown-styles.module.css";
+import markdownStyles from "./markdown-styles.module.css";
 import Headings from "./headings";
 import { PostPreview } from "../post-preview";
 import { getAllPosts } from "@/api";

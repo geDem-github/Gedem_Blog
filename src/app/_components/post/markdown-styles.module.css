@@ -6,15 +6,11 @@
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  @apply text-sm md:text-base my-5;
-}
-
-.markdown hr {
-  @apply border-transparent my-8;
+  @apply text-sm md:text-lg my-6;
 }
 
 .markdown h2 {
-  @apply text-xl md:text-3xl mt-12 mb-4 leading-snug font-bold border-l-4 pl-2 mt-16 border-blue-700;
+  @apply text-xl md:text-3xl my-8 leading-snug font-bold border-l-4 pl-2 border-blue-700;
 }
 .markdown h2 a {
   @apply text-slate-50 hover:no-underline;
@@ -27,20 +23,28 @@
   @apply text-slate-50 hover:no-underline;
 }
 
+.markdown a {
+  @apply text-blue-400 hover:underline;
+}
+
+.markdown li {
+  @apply list-disc ml-5;
+}
+
 .markdown img {
   @apply block mx-auto max-h-[680px];
 }
 
 .markdown code {
-  @apply md:max-w-[500px] overflow-x-scroll mx-auto shadow-2xl text-xs md:text-sm rounded-xl;
+  @apply md:max-w-[500px] overflow-x-scroll mx-auto shadow-xl text-xs md:text-sm rounded-xl;
 }
 
 .markdown blockquote {
-  @apply text-gray-400 border-l-2 border-neutral-300 pl-4 mt-0;
+  @apply text-gray-400 border-l-2 border-neutral-300 pl-4 my-4;
 }
 
-.markdown a {
-  @apply text-blue-400 hover:underline;
+.markdown hr {
+  @apply border-transparent my-8;
 }
 
 @media screen and (min-width: 810px) {
