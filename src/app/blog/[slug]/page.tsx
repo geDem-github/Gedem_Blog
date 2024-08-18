@@ -28,12 +28,13 @@ export default async function Page({ params }: Params) {
 
   // HTML整形
   const rawHtml = await markdownToHtml(post.content || "");
-  const htmlContents = load(rawHtml);
+  let htmlContents = load(rawHtml);
+  // ファイル名テキスト追加
+  htmlContents = addFileNameText(htmlContents);
   // 目次作成
   const headings = getHeadings(htmlContents);
   // コードハイライト
-  const highlightedPostContent = highlightCode(htmlContents);
-  const modifiedHtml = highlightedPostContent.html();
+  const highlightedHtml = highlightCode(htmlContents).html();
 
   return (
     <div>
@@ -51,7 +52,7 @@ export default async function Page({ params }: Params) {
                 />
                 <PostBody
                   slug={post.slug}
-                  content={modifiedHtml}
+                  content={highlightedHtml}
                   headings={headings}
                 />
               </div>
@@ -93,35 +94,51 @@ export async function generateMetadata({ params }: Params) {
   } as Metadata;
 }
 
+// コード前にファイル名テキスト追加
+const addFileNameText = (htmlContents: CheerioAPI): CheerioAPI => {
+  const regex = /(?<=::)[\w.-]+\.\w+/g;
+  htmlContents("pre code").each((_, elm) => {
+    try {
+      const classValue = elm.attributes[0]?.value;
+      const match = classValue.match(regex);
+      if (match) {
+        htmlContents(elm).before(`<span>${match[0]}</span>`);
+      }
+    } catch {}
+  });
+
+  return htmlContents;
+};
+
 // コードハイライト
-const highlightCode = (htmlContent: CheerioAPI): CheerioAPI => {
+const highlightCode = (htmlContents: CheerioAPI): CheerioAPI => {
   // (highlightAutoだと、なぜかbuildできなかったので拡張子を抽出)
-  htmlContent("pre code").each((_, elm) => {
+  htmlContents("pre code").each((_, elm) => {
     try {
       const classValue = elm.attributes[0]?.value;
       const regex = /language-(\w+)/;
       const match = classValue.match(regex);
       if (match) {
         const language = match[1];
-        const result = hljs.highlight(htmlContent(elm).text(), {
+        const result = hljs.highlight(htmlContents(elm).text(), {
           language: language,
         }).value;
 
-        htmlContent(elm).html(result);
+        htmlContents(elm).html(result);
       }
+      htmlContents(elm).addClass("hljs");
     } catch {}
-    htmlContent(elm).addClass("hljs");
   });
-  return htmlContent;
+  return htmlContents;
 };
 
 // 目次作成
-const getHeadings = (htmlContent: CheerioAPI): string[] => {
+const getHeadings = (htmlContents: CheerioAPI): string[] => {
   const headings: string[] = [];
-  htmlContent("h2").each((_, elm) => {
-    const text = htmlContent(elm).text();
+  htmlContents("h2").each((_, elm) => {
+    const text = htmlContents(elm).text();
     headings.push(text);
-    htmlContent(elm).contents().wrap(`<a id="${text}" href="#${text}"></a>`);
+    htmlContents(elm).contents().wrap(`<a id="${text}" href="#${text}"></a>`);
   });
   return headings;
 };
