@@ -31,13 +31,13 @@ export const MenuSidebar = () => {
           isExternal={false}
         />
         <MenuItem
-          destination={"/"}
+          destination={"https://github.com/gedem-github"}
           imgSrc={githubImage.src}
           title={"GitHub"}
           isExternal={true}
         />
         <MenuItem
-          destination={"/"}
+          destination={"https://www.wantedly.com/id/harukikoga"}
           imgSrc={wantedlyImage.src}
           title={"Wantedly"}
           isExternal={true}
