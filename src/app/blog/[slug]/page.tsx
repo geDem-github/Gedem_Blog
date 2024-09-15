@@ -118,6 +118,7 @@ const highlightCode = (htmlContents: CheerioAPI): CheerioAPI => {
       const classValue = elm.attributes[0]?.value;
       const regex = /language-(\w+)/;
       const match = classValue.match(regex);
+
       if (match) {
         const language = match[1];
         const result = hljs.highlight(htmlContents(elm).text(), {
@@ -126,8 +127,9 @@ const highlightCode = (htmlContents: CheerioAPI): CheerioAPI => {
 
         htmlContents(elm).html(result);
       }
-      htmlContents(elm).addClass("hljs");
     } catch {}
+
+    htmlContents(elm).addClass("hljs");
   });
   return htmlContents;
 };
