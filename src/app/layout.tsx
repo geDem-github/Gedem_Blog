@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "geDem Blog",
   description:
-    "現役エンジニアによるテックブログです。主にフロントエンド・モバイル(iOS/Android)を中心に、機能の実装方法・デバッグ方法を紹介します。",
+    "現役エンジニアによるテックブログです。主にフロントエンド・モバイル(iOS/Android)を中心に、機能の実装方法・デバッグ方法を紹介します。文系大学生の頃の自分でもわかるくらい簡単に書くことが目標です。",
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION_CODE,
   },
