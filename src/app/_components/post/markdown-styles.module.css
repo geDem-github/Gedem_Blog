@@ -6,7 +6,7 @@
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  @apply text-sm md:text-lg my-6;
+  @apply text-sm md:text-base my-6;
 }
 
 .markdown h2 {

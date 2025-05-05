@@ -14,11 +14,11 @@ export const GridContainer = ({ children, headings, tags }: Props) => {
     // 記事画面
     return (
       <div className="mx-auto md:flex justify-center max-w-[1700px]">
-        <div className="hidden md:inline-block w-3/12">
+        <div className="hidden md:inline-block w-4/12 xl:w-3/12">
           <MenuSidebar />
         </div>
-        <div className="w-full md:w-9/12 xl:w-7/12 md:mx-2">{children}</div>
-        <div className="hidden xl:inline-block w-4/12">
+        <div className="w-full md:w-8/12 xl:w-6/12 md:mx-2">{children}</div>
+        <div className="hidden xl:inline-block xl:w-3/12">
           <PostSidebar headings={headings} />
         </div>
       </div>

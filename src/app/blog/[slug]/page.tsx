@@ -42,7 +42,7 @@ export default async function Page({ params }: Params) {
       <main className="mt-14 mb-32 px-4">
         <article>
           <GridContainer headings={headings}>
-            <div className="md:px-2">
+            <div className="md:px-8">
               <div className="bg-neutral-700 rounded-xl">
                 <PostHeader
                   title={post.title}
